@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bling</title>
+	<link rel="stylesheet" type="text/css" href="bing.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--   Start of Container -->
+<div id="container">     
+	     <header id="header">   
+<!-- The nav bar and the search bar goes in here  -->
+<nav>
+	<ul>
+		<li > <a href="#">Images</a>   </li>
+		<li > <a href="#"> Videos</a>  </li>
+		<li> <a href="#">Maps</a>  </li>
+		<li> <a href="#">News</a>  </li>
+		<li > <a href="#">|</a>    </li>
+		<li> <a href="#">Teklu_Elnatan</a>      
+			<ul>
+			  <li> <a onclick="calculator1()" href="#">Calculator </a> </li>
+			  <li> <a onclick="movingGraph()" href="#">Moving Graph </a> </li>
+			</ul>
+	  </li>
+  </ul>
+</nav>
+
+               <!--  The Bing Search Bar  -->
+ <form>
+ 	<img id="bingLogo" src="bing.jpg" style="width: 100px;" >
+ 	<input type="text" name="searchBar" id="search">
+ 	<input id="logo" type="image" src="bingLogo.jpg"> 
+ </form>
+
+ </header>      <!--  END of the Header  -->
+		     <div id="banner">
+
+<!-- the carousel,buttons,calculator,moving graph go in here --> 
+		<ul class="low">
+			<button type="button" onclick="prev()"> < </button>
+			<button type="button" onclick="next()"> > </button>
+		</ul>
+		
+  		<canvas 
+
+  		id="myCanvas" width="750px" height="1550px" 
+  		style="display: none" onmouseleave="movingGraphHidden(this)" 
+  		class="posMovingGraph" onmouseenter="movingGraphShow(this)">
+  			
+  		</canvas>
+
+
+				<!-- THE CALCULATOR -->
+
+
+<div id="calContainer" class="posCal" style="display: none" >
+	<form name="calculator">
+		<input class="textBar" type="text" name="answer">
+		<br>
+
+		<input class="key" type="button" value="7" onclick="calculator.answer.value += '7'  ">
+		<input class="key" type="button" value="8" onclick="calculator.answer.value += '8'  ">
+		<input class="key" type="button" value="9" onclick="calculator.answer.value += '9'  ">
+		<input class="key" type="button" value="x" onclick="calculator.answer.value += '*'  ">
+		<br>
+
+		<input class="key" type="button" value="4" onclick="calculator.answer.value += '4'  ">
+		<input class="key" type="button" value="5" onclick="calculator.answer.value += '5'  ">
+		<input class="key" type="button" value="6" onclick="calculator.answer.value += '6'  ">
+		<input class="key" type="button" value="-" onclick="calculator.answer.value += '-'  ">
+		<br>
+
+		<input class="key" type="button" value="1" onclick="calculator.answer.value += '1'">
+		<input class="key" type="button" value="2" onclick="calculator.answer.value += '2'">
+		<input class="key" type="button" value="3" onclick="calculator.answer.value += '3'  ">
+		<input class="key" type="button" value="+" onclick="calculator.answer.value += '+'  ">
+		<br>
+
+		<input class="key" type="button" value="c" onclick="calculator.answer.value = ''  ">
+		<input class="key" type="button" value="0" onclick="calculator.answer.value += '0'  ">
+		<input class="key" type="button" value="=" onclick="calculator.answer.value = eval(calculator.answer.value)">
+		<input class="key" type="button" value="/" onclick="calculator.answer.value += '/'  ">
+		<br>
+
+	</form>
+</div> 	<!-- END OF THE CALCULATOR -->
+
+
+		</div>   <!--  End of the banner of midSection  -->
+
+<!-- Start of the footer content area white page scroll up -->
+
+		<div id="content">  
+
+  <div style="text-align:center">
+  <h2>CURRENT IMAGE'S</h2>
+ 
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <img src="b6.jpg"  style="width:75%" onclick="openImg('a');">
+  </div>
+  <div class="column">
+    <img src="b12.jpg"  style="width:75%" onclick="openImg('b');">
+  </div>
+  <div class="column">
+    <img src="b13.jpg"  style="width:75%" onclick="openImg('c');">
+  </div>
+  
+</div>
+
+<div id="a" class="expandedImg">
+  <img src="b6.jpg"  style="width:25%">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+ 
+</div>
+
+<div id="b" class="expandedImg">
+  <img src="b12.jpg"  style="width:25%">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+</div>
+
+<div id="c" class="expandedImg">
+  <img src="b13.jpg"  style="width:25%">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+</div>
+<footer>
+				<nav>
+				<ul>
+					<li > <a href=""> 2017 Microsoft | </a> </li>
+					<li > <a href=""> Privacy and Cookies |</a> </li>
+					<li> <a href=""> Legal  |</a> </li>
+					<li> <a href=""> Advertise  |</a> </li>
+					<li> <a href=""> About our ads |</a> </li>
+					<li> <a href=""> Help |</a> </li>
+					<li> <a href=""> Feedback </a> </li>
+				</ul>
+				</nav>
+			</footer>
+			
+		</div>
+</div>   <!--    End   of Container -->
+
+
+<script type="text/javascript" src="bing.js"> </script>
+
+</body>
+</html>
